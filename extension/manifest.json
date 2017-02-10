@@ -1,0 +1,27 @@
+{
+  "name": "old GitHub header",
+  "version": "1.0.0",
+  "description": "The old GitHub header",
+  "homepage_url": "https://github.com/robdel12/old-github-header",
+  "manifest_version": 2,
+  "minimum_chrome_version": "49",
+  "permissions": [
+    "https://github.com/*",
+    "https://gist.github.com/*"
+  ],
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "matches": [
+        "https://github.com/*",
+        "https://gist.github.com/*"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ]
+}
